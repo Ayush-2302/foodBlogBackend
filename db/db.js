@@ -12,9 +12,9 @@ const connectionToMongoDB = async () => {
 
 const fetchdata = async () => {
   try {
-    const fetch_data = await mongoose.connection.db.collection("f_data");
+    const fetch_data =  mongoose.connection.db.collection("f_data");
     const result = await fetch_data.find({}).toArray();
-    const fetch_catagory = await mongoose.connection.db.collection("fcatag");
+    const fetch_catagory =  mongoose.connection.db.collection("fcatag");
     const result_catagory = await fetch_catagory.find({}).toArray();
 
 
